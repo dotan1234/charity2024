@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=deivece-width, initial-scale=1.0">
+    <title>Participation Information</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/daf4d84e10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- -------home------- -->
+    <section class="header" id="header" style="background-image: linear-gradient(white, rgba(66, 29, 29, 0.7)), url(../img/run1.jpeg);">
+        <nav>
+            <a href="index.html"><img src="../img/seccLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programEvent.html">Program Events</a></li>
+                    <li><a href="generalInfo.html">General Info</a></li>
+                    <li><a href="participation.html">Participation Info</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="inquiryForm.html">Inquiry Form</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Let's Join With Us</h1>
+            <p>Join us at Saigon Exhibition and Convention Center (SECC) on <b>11<sup>th</sup> October 2024.</b></p>
+        </div>
+    </section>
+
+    <section class="payment-form">
+        <div class="guideline">
+            <div>
+                <h3>Ticket price list</h3>
+                <ul>
+                    <li>5km distance: 600,000 VND/person</li>
+                    <li>10km distance: 800,000 VND/person</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Payment Information</h3>
+                <div class="payment">
+                    <img src="../img/payment.png">
+                    <p>Name_ParticipationRole_DistanceRace(If runner)</p>  
+                </div>
+            </div>
+        </div>
+        <div class="form-build">
+            <h2>Let's Join</h2>
+            <form class="form-payment" id="formBuild">
+                <input type="text" placeholder="full Name" id="nameF" required>
+                <input type="email" placeholder="email" id="emailF" required>
+                <input type="tel" placeholder="number phone" id="telF" required>
+                <input type="text" id="org" placeholder="organization">
+                
+                <div class="radio">
+                    <input type="radio" name="radio" value="runner" checked>runner
+                    <input type="radio" name="radio" value="volunteer">volunteer
+                    <input type="radio" name="radio" value="sponsor">sponsor
+                </div>
+
+                <button type="submit" class="register-btn" id="register-btn">Submit</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <script src="../javascript/action.js"></script>
+    <script>document.getElementById("formBuild").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from submitting
+        
+        // Get form values
+        var name = document.getElementById("nameF").value;
+        var email = document.getElementById("emailF").value;
+        var tel = document.getElementById("telF").value;
+    
+    
+        // Check if fields are filled
+        if (name === "" || email === "" || tel === "") {
+            alert("PLEASE ENTER THE VALUES!");
+            return;
+        }
+        alert("Successfully");
+    });
+    </script>
+</body>
+</html>

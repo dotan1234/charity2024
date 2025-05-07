@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta name="viewport" content="with=deivece-width, initial-scale=1.0">
+    <title>Inquiry Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/daf4d84e10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- -------home------- -->
+    <section class="header" id="header" style="background-image: linear-gradient(white, rgba(66, 29, 29, 0.7)), url(../img/run1.jpeg);">
+        <nav>
+            <a href="index.html"><img src="../img/seccLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programEvent.html">Program Events</a></li>
+                    <li><a href="generalInfo.html">General Info</a></li>
+                    <li><a href="participation.html">Participation Info</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="inquiryForm.html">Inquiry Form</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Let's Join With Us</h1>
+            <p>Join us at Saigon Exhibition and Convention Center (SECC) on <b>11<sup>th</sup> October 2024.</b></p>
+        </div>
+    </section>
+
+    <section class="form-container">
+        <h2 style="text-align: center;">Event Inquiry Form</h2>
+        <form class="form" id="inquiryForm">
+            <label for="name" style="width: auto;">Full Name:</label>
+            <input type="text" placeholder="full Name" id="name" >
+
+            <label for="email" style="width: auto;">Email:</label>
+            <input type="email" placeholder="email" id="email" >
+
+            <label for="event" style="width: auto;">Interested Event:</label>
+            <select name="event" id="event" id="event" >
+                <option value="Select">Select Your Interested Event</option>
+                <option value="Run 5km">Run 5km</option>
+                <option value="Run 10km">Run 10km</option>
+            </select>
+            
+            <label for="Category" style="width: auto;" >Category of Enquiry:</label>
+            <div class="checkbox-container">
+                <label><input type="checkbox" name="join" value="join"> To Join</label>
+                <label><input type="checkbox" name="event-activity" value="event-activity">Event Activities</label>
+                <label><input type="checkbox" name="fee" value="fee">Registration fees</label>
+                <label><input type="checkbox" name="rule" value="rule">Rules & Guidelines</label>      
+            </div>
+            
+            <label for="Detail" style="width: auto;">Details Enquiry:</label>
+            <textarea name="detail" id="detail" rows="4" cols="40" placeholder="Type here..."></textarea
+
+            <div class="submit-btn">
+                <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn" id="reset-btn">Cancel</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- -------footer------- -->
+    <footer>
+        <div class="footer-bottom" style="background-color: rgb(238, 238, 238);;">
+            <hr>
+            <p>Copyright 2024 SECC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../javascript/action.js"></script>
+</body>
+</html>
